@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { RecordContext } from "../RecordsContext";
 
 const SearchBar = () => {
-  const { searchTerm, setSearchTerm } = useContext(RecordContext);
+  const { searchTerm, setSearchTerm, searchFocus } = useContext(RecordContext);
   return (
     <>
-      <div className="searchbar flex gap-3 items-center w-[300px] rounded-full py-2 px-3 bg-gray-100">
+      <div className="searchbar hidden sm:flex gap-3 items-center w-[300px] rounded-full py-2 px-3 bg-gray-50 border border-purple-200">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -18,7 +18,9 @@ const SearchBar = () => {
         </svg>
         <input
           value={searchTerm}
-          onChange={(e)=>{setSearchTerm(e.target.value)}}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
           type="text"
           placeholder="Search by Keywords.."
           className="text-lg outline-none bg-transparent w-[100%]"

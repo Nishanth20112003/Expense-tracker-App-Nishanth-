@@ -10,7 +10,7 @@ export const RecordProvider = ({ children }) => {
   const [editRecord, setEditRecord] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterType, setFilterType] = useState("all");
-  const [searchedRecords, setSearchedRecords] = useState("");
+
 
   function addRecord(newRecord) {
     setRecords([...records, newRecord]);

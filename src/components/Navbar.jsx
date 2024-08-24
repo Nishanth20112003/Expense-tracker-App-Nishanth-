@@ -3,13 +3,13 @@ import profile from "../assets/profile2.jpg";
 import { RecordContext } from "../RecordsContext";
 
 const Navbar = () => {
-const {toggleForm, setToggleForm} = useContext(RecordContext)
+  const { toggleForm, setToggleForm, searchTerm, setSearchTerm } =
+    useContext(RecordContext);
   return (
     <>
       <div className="navbar w-[100%] py-4 px-[40px] flex gap-1 items-center justify-between bg-purple-50">
         <div className="flex gap-2 items-center">
           <svg
-            
             xmlns="http://www.w3.org/2000/svg"
             width="36"
             height="36"
@@ -29,7 +29,23 @@ const {toggleForm, setToggleForm} = useContext(RecordContext)
         </div>
 
         <div className="flex gap-[15px] items-center">
-          <div className="bg-purple-600 p-1 cursor-pointer rounded-full hover:bg-purple-700" onClick={()=>{setToggleForm(!toggleForm)}}>
+          <div className="search-bar sm:hidden">
+            <input
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+              }}
+              type="text"
+              placeholder="Search with Keywords."
+              className="p-2 text-lg border rounded-full outline-none bg-gray-200"
+            />
+          </div>
+          <div
+            className="bg-purple-600 p-1 cursor-pointer rounded-full hover:bg-purple-700"
+            onClick={() => {
+              setToggleForm(!toggleForm);
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
@@ -44,7 +60,8 @@ const {toggleForm, setToggleForm} = useContext(RecordContext)
               />
             </svg>
           </div>
-          <div className="notification-section relative">
+
+          <div className="notification-section relative hidden sm:block">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
@@ -59,7 +76,7 @@ const {toggleForm, setToggleForm} = useContext(RecordContext)
           </div>
           <img
             src={profile}
-            className="w-[40px] h-[40px] rounded-full cursor-pointer object-contain"
+            className="w-[40px] h-[40px] rounded-full cursor-pointer object-contain hidden sm:block"
           />
         </div>
       </div>

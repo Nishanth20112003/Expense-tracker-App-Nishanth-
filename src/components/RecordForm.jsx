@@ -15,7 +15,6 @@ const RecordForm = () => {
   const [date, setDate] = useState("");
   const [type, setType] = useState("income");
 
- 
   useEffect(() => {
     if (editRecord) {
       setType(editRecord.type);
@@ -23,7 +22,6 @@ const RecordForm = () => {
       setDescription(editRecord.description);
       setAmount(editRecord.amount);
     } else {
-      
       setType("income");
       setDescription("");
       setAmount("");
@@ -66,7 +64,7 @@ const RecordForm = () => {
   }
 
   return (
-    <div className="p-6 mx-auto w-[600px] bg-white shadow-lg rounded-lg absolute top-[10%] left-[50%] transform translate-x-[-50%] z-20">
+    <div className="p-6 mx-auto w-[90%] sm:w-[40%] bg-white shadow-lg rounded-lg absolute top-[10%] left-[50%] transform translate-x-[-50%] z-20">
       <div
         className="close-icon cursor-pointer"
         onClick={() => {
