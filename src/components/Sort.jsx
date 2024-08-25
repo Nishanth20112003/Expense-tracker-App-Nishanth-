@@ -29,7 +29,7 @@ const Sort = () => {
   return (
     <div className="sort relative">
       <button
-        className=" flex items-center gap-2 border py-2 rounded-lg px-6 text-gray-400 text-lg hover:border-purple-300 hover:shadow-md "
+        className=" flex items-center gap-2 border py-1 sm:py-2 rounded-lg px-1 sm:px-6 text-gray-400 text-sm sm:text-lg hover:border-purple-300 hover:shadow-md "
         onClick={toggleDropdown}
       >
         Sort

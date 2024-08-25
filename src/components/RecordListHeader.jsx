@@ -10,9 +10,9 @@ const RecordListHeader = ({ toggleForm }) => {
       {toggleForm ? (
         ""
       ) : (
-        <div className="header bg-white px-3 pb-4 py-3  flex gap-1 items-center justify-between fixed w-[88.9%] rounded-tl-lg rounded-tr-lg">
+        <div className="header bg-white px-3 pb-4 py-3  flex gap-1 items-center justify-between fixed  rounded-tl-lg rounded-tr-lg">
           <SearchBar />
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             <TotalExpenseAndIncome />
             <Filter />
             <Sort />

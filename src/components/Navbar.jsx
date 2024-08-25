@@ -7,7 +7,7 @@ const Navbar = () => {
     useContext(RecordContext);
   return (
     <>
-      <div className="navbar w-[100%] py-4 px-[40px] flex gap-1 items-center justify-between bg-purple-50">
+      <div className="navbar w-[100%] py-4 px-2 sm:px-[40px] flex gap-1 items-center justify-between bg-purple-50">
         <div className="flex gap-2 items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ const Navbar = () => {
             <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z" />
             <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567" />
           </svg>
-          <h1 className="text-3xl font-semibold">TractIt</h1>
+          <h1 className="text-xl sm:text-3xl font-semibold">TractIt</h1>
         </div>
 
         <div className="flex gap-[15px] items-center">
@@ -37,7 +37,7 @@ const Navbar = () => {
               }}
               type="text"
               placeholder="Search with Keywords."
-              className="p-2 text-lg border rounded-full outline-none bg-gray-200"
+              className="p-2 text-sm sm:text-lg border rounded-full outline-none bg-gray-200"
             />
           </div>
           <div

@@ -32,7 +32,7 @@ const Filter = () => {
         onClick={() => {
           setToggleModal(!toggleModal);
         }}
-        className="flex gap-2 items-center border py-2 rounded-lg px-6 text-gray-400 text-lg hover:border-purple-300 hover:shadow-md "
+        className="flex gap-2 items-center border py-1 sm:py-2 rounded-lg px-1 sm:px-6 text-gray-400 text-sm sm:text-lg hover:border-purple-300 hover:shadow-md "
       >
         {activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1)}
         <span>
